@@ -9,7 +9,7 @@ module.exports = function(sequelize, DataTypes) {
         },
         id: {
             type: DataTypes.INTEGER,
-            autIncrement: true,
+            autoIncrement: true,
             primaryKey: true
         },
         snippet: {

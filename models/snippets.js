@@ -1,8 +1,8 @@
 module.exports = function(sequelize, DataTypes) {
-    var stories = sequelize.define("stories", {
+    var snippets = sequelize.define("snippets", {
         id: {
             type: DataTypes.INTEGER,
-            autIncrement: true,
+            autoIncrement: true,
             primaryKey: true
         },
         parentID: {
@@ -38,5 +38,5 @@ module.exports = function(sequelize, DataTypes) {
         }
     });
 
-    return Authors;
+    return authors;
 };
