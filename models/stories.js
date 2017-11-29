@@ -16,14 +16,19 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.INTEGER,
             allowNull: false,
         },
-        Author: {
+        author: {
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
                 len: [1]
             }
         },
-        Genre: {
+        authorID: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            }
+        },
+        genre: {
             type: DataTypes.STRING,
             allowNull: false
         },
