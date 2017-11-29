@@ -1,3 +1,3 @@
 # flash-fiction
 
-NELSON SENT SOME STUFF
+This application is a place to write stories that other people can continue.
