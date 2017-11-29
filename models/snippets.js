@@ -1,14 +1,15 @@
 module.exports = function(sequelize, DataTypes) {
-    var stories = sequelize.define("stories", {
+    var snippets = sequelize.define("snippets", {
         id: {
             type: DataTypes.INTEGER,
-            autIncrement: true,
+            autoIncrement: true,
             primaryKey: true
         },
-        storyID: {
-            type: DataTypes.INTEGER
-        },
         parentID: {
+            type: DataTypes.INTEGER,
+            allowNull: false
+        },
+        level: {
             type: DataTypes.INTEGER,
             allowNull: false
         },
