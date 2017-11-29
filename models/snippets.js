@@ -5,14 +5,15 @@ module.exports = function(sequelize, DataTypes) {
             autIncrement: true,
             primaryKey: true
         },
-        storyID: {
-            type: DataTypes.INTEGER
-        },
         parentID: {
             type: DataTypes.INTEGER,
             allowNull: false
         },
-        Author: {
+        level: {
+            type: DataTypes.INTEGER,
+            allowNull: false
+        },
+        author: {
             type: DataTypes.INTEGER,
             allowNull: false
         },

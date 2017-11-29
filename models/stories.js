@@ -13,7 +13,7 @@ module.exports = function(sequelize, DataTypes) {
             primaryKey: true
         },
         snippet: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING,
             allowNull: false,
         },
         author: {
@@ -26,7 +26,6 @@ module.exports = function(sequelize, DataTypes) {
         authorID: {
             type: DataTypes.INTEGER,
             allowNull: false,
-            }
         },
         genre: {
             type: DataTypes.STRING,

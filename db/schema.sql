@@ -1,2 +1,2 @@
-DROP DATABASE IF EXISTS `stories_db`;
-CREATE DATABASE `stories_db`;
+DROP DATABASE IF EXISTS stories;
+CREATE DATABASE stories;
