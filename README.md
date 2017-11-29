@@ -1,3 +1,3 @@
 # flash-fiction
 
-test test test
+This application is a place to write stories that other people can continue.
