@@ -1,40 +1,45 @@
-<h1>Quotes App</h1>
-
-<p>Manage quotes with this app</p>
-
-<h2>Add a Story</h2>
-
-<form class="create-form">
-
-  <div class="form-group">
+<nav class="navbar navbar-light bg-light">
+  <form class="form-inline create-form">
     <label for="auth">Author:</label>
-    <input type="text" id="auth" name="author">
+    <input class="form-control mr-sm-2" type="text" id="auth" name="author">
+
+    <label for="titl">Story Title:</label>
+    <input class="form-control mr-sm-2" type="text" id="titl" name="title">
+    
+    <label for="snip">Snippet:</label>
+    <textarea id="snip" name="snippet" rows="8" cols="40"></textarea>
+    
+    <label for="gen">Genre:</label>
+    <input class="form-control mr-sm-2" type="text" id="gen" name="author">
+
+
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Submit</button>
+  </form>
+</nav>
+
+<div class="container">
+  <div class="row">
+    <div class="col col-md-10">
+      <h1>Flash Fiction</h1>
+    </div>
   </div>
 
-  <div class="form-group">
-    <label for="quo">Story Title:</label>
-    <textarea id="quo" name="quote" rows="8" cols="40"></textarea>
+  <div class="row">
+    <div class="col col-md-10">
+    <p>View the latest crowdsourced stories</p>
+    </div>
   </div>
 
-  <div class="form-group">
-    <label for="quo">:</label>
-    <textarea id="quo" name="quote" rows="8" cols="40"></textarea>
+<div class="row">
+    <div class="col col-md-10">
+      <ul>
+        {{#each stories}}
+          <li>
+            <p><span class="label">Title:</span> {{this.title}}</p>
+            <p><span class="label">Author:</span> {{this.author}}</p>
+            <a href="/story/{{this.id}}"></a>
+          </li>
+        {{/each}}
+      </ul>
   </div>
-
-  <button type="submit">Add Quote</button>
-</form>
-
-<!-- Pass in data from server.js -->
-<ul>
-  {{#each quotes}}
-    <li>
-      <p><span class="label">ID:</span> {{this.id}}</p>
-      <p><span class="label">Quote:</span> {{this.quote}}</p>
-      <p><span class="label">Author:</span> {{this.author}}</p>
-
-      <button data-id="{{this.id}}" class="delquote">Delete</button>
-
-      <a href="/{{this.id}}">Update this quote</a>
-    </li>
-  {{/each}}
-</ul>
+</div>
