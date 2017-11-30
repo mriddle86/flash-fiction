@@ -38,5 +38,5 @@ module.exports = function(sequelize, DataTypes) {
         }
     });
 
-    return authors;
+    return snippets;
 };
