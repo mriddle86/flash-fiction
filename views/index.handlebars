@@ -1,8 +1,3 @@
-<h1>Flash Fiction</h1>
-
-<p>View the latest crowdsourced stories</p>
-
-
 <nav class="navbar navbar-light bg-light">
   <form class="form-inline create-form">
     <label for="auth">Author:</label>
@@ -22,13 +17,29 @@
   </form>
 </nav>
 
+<div class="container">
+  <div class="row">
+    <div class="col col-md-10">
+      <h1>Flash Fiction</h1>
+    </div>
+  </div>
 
-<ul>
-  {{#each stories}}
-    <li>
-      <p><span class="label">Title:</span> {{this.title}}</p>
-      <p><span class="label">Author:</span> {{this.author}}</p>
-      <a href="/story/{{this.id}}"></a>
-    </li>
-  {{/each}}
-</ul>
+  <div class="row">
+    <div class="col col-md-10">
+    <p>View the latest crowdsourced stories</p>
+    </div>
+  </div>
+
+<div class="row">
+    <div class="col col-md-10">
+      <ul>
+        {{#each stories}}
+          <li>
+            <p><span class="label">Title:</span> {{this.title}}</p>
+            <p><span class="label">Author:</span> {{this.author}}</p>
+            <a href="/story/{{this.id}}"></a>
+          </li>
+        {{/each}}
+      </ul>
+  </div>
+</div>
