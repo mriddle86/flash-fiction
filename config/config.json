@@ -1,21 +1,21 @@
 {
   "development": {
     "username": "root",
-    "password": "3Ar7y81rd",
+    "password": "password",
     "database": "stories_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": "3Ar7y81rd",
-    "database": "databa3Ar7y81rdse_test",
+    "password": "password",
+    "database": "database_test",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
     "username": "root",
-    "password": "3Ar7y81rd",
+    "password": "password",
     "database": "database_production",
     "host": "127.0.0.1",
     "dialect": "mysql"
