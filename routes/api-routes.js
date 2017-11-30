@@ -36,7 +36,7 @@ module.exports = function(app) {
 
     // get latest stories
     app.get("/api/latest/:offset?", function(req, res) {
-        db.snippets.findAll({
+        db.stories.findAll({
             orderBy: [
                 [id, DESC]
             ],
@@ -47,6 +47,7 @@ module.exports = function(app) {
         })
     });
 
+    //adds new story
     app.post("/api/newStory", function (req, res){
     	console.log(req.body);
     	db.stories.create({
@@ -56,6 +57,14 @@ module.exports = function(app) {
     		authorID: req.body.authorID,
     		genre: req.body.genre
     	})
-    })
+    });
+
+    //adds new author
+    app.post("/api/newAuthor", function (req, res){
+        console.log(req.body);
+        db.stories.create({
+            name: req.body.name,
+        })
+    });
 
 };
