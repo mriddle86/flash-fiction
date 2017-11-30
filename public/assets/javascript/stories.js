@@ -1,3 +1,8 @@
+
+firstPageHide();
+middlePagesShow();
+lastPageHide();
+
 $(function() {
 	$(".create-form").on("submit", function(event) {
 		event.preventDefault();
@@ -40,4 +45,57 @@ $(".create-snippet-form").on("submit", function(event) {
 				location.reload();
 			});
 	});
+
+ 
+
+
+$(".previous-level").on("submit", function(event) {
+	event.preventDefault();
+	
+
+	$.ajax({ url: currentURL + "/api/snippets/:id", method: "GET" })
+      .done(function(snippetData) {
+
+      	$(".snippet-div").replaceWith("<p><strong>" + snippetData.title + "</strong></p><p>" + snippetData.snippet + "</p>");
+
+
+});
+
+
+$(".next-level").on("submit", function(event) {
+	event.preventDefault();
+
+	$.ajax({ url: currentURL + "/api/snippets/:id", method: "GET" })
+      .done(function(snippetData) {
+
+      	$(".snippet-div").replaceWith("<p><strong>" + snippetData.title + "</strong></p><p>" + snippetData.snippet + "</p>");
+
+});
+
+
+
+function firstPageHide() {
+	if (thisLevel = 1) {
+		$("previous-level").hide();
+		$("next-level").show();
+	}
+	 else {}
+};
+
+function middlePagesShow() {
+	if (thisLevel < 10 && thisLevel > 1) {
+		$("previous-level").show();
+		$("next-level").show();
+	}
+	 else {}
+};
+
+function lastPageHide() {
+	if (thisLevel = 10) {
+		$("previous-level").show();
+		$("next-level").hide();
+	}
+	 else {}
+};
+
 })
