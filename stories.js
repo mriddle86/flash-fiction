@@ -98,41 +98,4 @@ function lastPageHide() {
 	 else {}
 };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-		$("previous-level").show();
-		$("next-level").hide();
-	}
-	 else {}
-}
-
 })
