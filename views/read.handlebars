@@ -1,16 +1,18 @@
-<h1>Update the quote with an id of {{this.id}}</h1>
+<h1>{{this.title}}</h1>
 
-<form data-id="{{this.id}}" class="update-form">
+
+
+
+
+<form data-id="{{this.id}}" class="create-snippet-form">
 
   <div class="form-group">
     <label for="auth">Author:</label>
     <input type="text" id="auth" name="author" value="{{this.author}}">
   </div>
 
-  <div class="form-group">
-    <label for="quo">Quote:</label>
-    <textarea id="quo" name="quote" rows="8" cols="40">{{this.quote}}</textarea>
-  </div>
+  <label for="snip">Snippet:</label>
+    <textarea id="snip" name="snippet" rows="8" cols="40"></textarea>
 
-  <button type="submit">Update Quote</button>
+  <button type="submit"></button>
 </form>
