@@ -16,9 +16,8 @@
   "production": {
     "username": "root",
     "password": "password",
-    "database": "xmvm0mp18drq2x10",
-    "host": "enqhzd10cxh7hv2e.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "database": "database_production",
+    "host": "127.0.0.1",
     "dialect": "mysql",
-    "use_env_variable": "mysql://kjygfmf3ple7q148:kshfm2qldflfy2a9@enqhzd10cxh7hv2e.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/xmvm0mp18drq2x10"
   }
 }
