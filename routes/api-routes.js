@@ -24,10 +24,11 @@ module.exports = function(app) {
     });
 
     // get snippets by parent
-    app.get("/api/snippets/:id", function(req, res) {
+    app.get("/api/snippets/:id/:level", function(req, res) {
         db.snippets.findAll({
             where: {
-                parentID: req.params.id
+                parentID: req.params.id,
+                level: level
             }
         }).then(function(dbsnippets) {
             res.json(dbsnippets);

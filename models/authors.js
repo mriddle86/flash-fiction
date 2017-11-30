@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-    var authors = sequelize.define("Authors", {
+    var authors = sequelize.define("authors", {
         name: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -18,7 +18,9 @@ module.exports = function(sequelize, DataTypes) {
             validate: {
                 len: [6]
             }
-        }
+        },
+    }, {
+        timestamps: false
     });
 
     return authors;
