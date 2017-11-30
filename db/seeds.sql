@@ -1,3 +1,5 @@
+use stories_db;
+
 INSERT INTO authors (name) VALUES ('Dr. Book');
 INSERT INTO authors (name) VALUES ('Bob');
 INSERT INTO authors (name) VALUES ('Jack');
@@ -9,7 +11,7 @@ INSERT INTO stories (title, snippet, author, authorID, genre) VALUE ('Yankee Doo
 INSERT INTO stories (title, snippet, author, authorID, genre) VALUE ('The Very Confused Dog', 'A dog saw a spoon. This was very confusing to him.', 'Jack', 3, 'Fiction');
 INSERT INTO stories (title, snippet, author, authorID, genre) VALUE ('The epic tale of Frugu McGee', 'One morning Frugu was eating breakfast but he knew that something was wrong.', 'Bob', 2, 'Fiction');
 INSERT INTO stories (title, snippet, author, authorID, genre) VALUE ('Revenge of the little Lamb', 'Mary had a little Lamb, but all that was about to change.', 'Tom', 5, 'Fiction');
-INSERT INTO stories (title, snippet, author, authorID, genre) VALUE ('I write too much', 'Help there are too many stories', 'Dr. Book', 3, 'SOS');
+INSERT INTO stories (title, snippet, author, authorID, genre) VALUE ('I write too much', 'Help there are too many sto`ries', 'Dr. Book', 3, 'SOS');
 
 INSERT INTO snippets (parentID, level, author, authorID, text) VALUE (1, 1, 'Bob', 2, 'During every red light, he still second guesses himself.');
 INSERT INTO snippets (parentID, level, author, authorID, text) VALUE (1, 1, 'Jack', 3, 'When the going gets tough, he is also able to fly.');

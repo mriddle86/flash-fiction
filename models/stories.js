@@ -38,7 +38,9 @@ module.exports = function(sequelize, DataTypes) {
         downVotes: {
             type: DataTypes.INTEGER,
             default: 0
-        }
+        },
+    }, {
+        timestamps: false
     });
 
     return stories;

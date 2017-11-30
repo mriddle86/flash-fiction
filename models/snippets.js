@@ -14,7 +14,7 @@ module.exports = function(sequelize, DataTypes) {
             allowNull: false
         },
         author: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING,
             allowNull: false
         },
         authorID: {
@@ -35,7 +35,9 @@ module.exports = function(sequelize, DataTypes) {
         downVotes: {
             type: DataTypes.INTEGER,
             default: 0
-        }
+        },
+    }, {
+        timestamps: false
     });
 
     return snippets;
