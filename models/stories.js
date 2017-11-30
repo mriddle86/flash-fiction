@@ -26,7 +26,6 @@ module.exports = function(sequelize, DataTypes) {
         authorID: {
             type: DataTypes.INTEGER,
             allowNull: false,
-            }
         },
         genre: {
             type: DataTypes.STRING,

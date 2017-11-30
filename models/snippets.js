@@ -13,7 +13,7 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.INTEGER,
             allowNull: false
         },
-        Author: {
+        author: {
             type: DataTypes.INTEGER,
             allowNull: false
         },
@@ -38,5 +38,5 @@ module.exports = function(sequelize, DataTypes) {
         }
     });
 
-    return Authors;
+    return authors;
 };
