@@ -1,18 +1,28 @@
-<h1>{{this.title}}</h1>
 
-
-
-
-
-<form data-id="{{this.id}}" class="create-snippet-form">
-
-  <div class="form-group">
-    <label for="auth">Author:</label>
-    <input type="text" id="auth" name="author" value="{{this.author}}">
+<div class="container">
+  <div class="row">
+    <div class="col col-md-10">
+		<div class="card text-white bg-primary mb-3">
+		  <div class="card-header">Snippet {{this.level}} of 10</div>
+		  <div class="card-body">
+		    <h4 class="card-title">{{this.title}}</h4>
+		    <p class="card-text">{{this.snippet}}</p>
+		  </div>
+		</div>
   </div>
+  <div class="row">
+    <div class="col col-md-4">
+		<form data-id="{{this.id}}" class="create-snippet-form">
 
-  <label for="snip">Snippet:</label>
-    <textarea id="snip" name="snippet" rows="8" cols="40"></textarea>
+		  <div class="form-group">
+		    <label for="auth">Author:</label>
+		    <input type="text" id="auth" name="author" value="{{this.author}}">
+		  </div>
 
-  <button type="submit"></button>
-</form>
+		  <label for="snip">Snippet:</label>
+		    <textarea id="snip" name="snippet" rows="8" cols="40"></textarea>
+
+		  <button type="submit"></button>
+		</form>
+	</div>
+  </div>
