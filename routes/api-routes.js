@@ -11,6 +11,17 @@ module.exports = function(app) {
             res.json(dbstories);
         })
     });
+    
+    // get story by genre
+    app.get("/api/genre/:genre", function(req, res) {
+        db.stories.findOne({
+            where: {
+                genre: req.params.genre
+            }
+        }).then(function(dbStories) {
+            res.json(dbstories);
+        })
+    });
 
     // get author by name
     app.get("/api/author/:name", function(req, res) {
@@ -48,7 +59,7 @@ module.exports = function(app) {
         })
     });
 
-    //adds new story
+    // adds new story
     app.post("/api/newStory", function (req, res){
     	console.log(req.body);
     	db.stories.create({
@@ -60,12 +71,29 @@ module.exports = function(app) {
     	})
     });
 
-    //adds new author
+    // adds new author
     app.post("/api/newAuthor", function (req, res){
         console.log(req.body);
         db.stories.create({
-            name: req.body.name,
+            name: req.body.name
         })
     });
 
+    // adds up votes
+    app.put("/api/upVotesStories/:id/:level", function(req, res) {
+        db.stories.increment('upVotes', {id: req.params.id})
+    });
+
+    app.put("/api/upVotesSnippets/:id/:level", function(req, res) {
+        db.snippets.increment('upVotes', {id: req.params.id})
+    });
+
+    // add down votes
+    app.put("/api/downVotesStories/:id/:level", function(req, res) {
+        db.stories.increment('downVotes', {id: req.params.id})
+    });
+
+    app.put("/api/downVotesSnippets/:id/:level", function(req, res) {
+        db.snippets.increment('downVotes', {id: req.params.id})
+    });
 };
