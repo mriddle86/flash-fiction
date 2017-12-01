@@ -39,7 +39,7 @@ module.exports = function(app) {
     app.get("/api/latest/:offset?", function(req, res) {
         db.stories.findAll({
             orderBy: [
-                [id, DESC]
+                ['id', 'DESC']
             ],
             limit: 5
             //offset: req.params.offset

@@ -13,7 +13,7 @@ app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
 //Serve static content for the app from the "public" directory in the application directory.
-app.use(express.static(process.cwd() + '/public'));
+app.use(express.static('/public'));
 
 // Parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -27,7 +27,7 @@ require("./routes/api-routes.js")(app);
 require("./routes/html-routes.js")(app);
 
 // Open Server
-var PORT = process.env.PORT || 3000;
+var PORT = process.env.PORT || 8080;
 
 db.sequelize.sync({ force: false }).then(function() {
   app.listen(PORT, function() {
