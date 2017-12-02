@@ -7,11 +7,6 @@ module.exports = function(sequelize, DataTypes) {
                 len: [1]
             }
         },
-        id: {
-            type: DataTypes.INTEGER,
-            autoIncrement: true,
-            primaryKey: true
-        },
         snippet: {
             type: DataTypes.STRING,
             allowNull: false,
