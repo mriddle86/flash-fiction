@@ -46,7 +46,96 @@
 														<input class="form-control mr-sm-2" type="text" id="gen" name="author">
 													</div>
 												</div>
+												<div class= "row"><nav class="navbar navbar-light bg-light opacitize">
+		<h1>FLASH FICTION</h1>
+			<form class="form-inline create-form float-right">
+				<label for="auth">Search by genre:</label>
+				<input class="form-control mr-sm-2" type="text" id="auth" name="author">
+				<button class="btn btn-primary my-2 my-sm-0" type="submit">SEARCH</button>
+				<button class="btn btn-primary my-2 my-sm-0" type="submit">LOGIN</button>
+			</form>
+		</nav>
+		<div class="container add-spacing ">
+			<div class="row justify-content-md-center">
+				<div class="col col-md-12">
+					<!-- Button trigger modal -->
+					<div class="row justify-content-md-center opacitize">
+						<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+						ADD A NEW STORY
+						</button>
+					</div>
+					<!-- Modal -->
+					<!-- The Modal -->
+					<div class="modal fade " id="myModal">
+						<div class="modal-dialog modal-lg">
+							<div class="modal-content  text-white bg-primary mb-3">
+								
+								<!-- Modal Header -->
+								<div class="modal-header">
+									<h4 class="modal-title">Start a new Story</h4>
+									<button type="button" class="close" data-dismiss="modal">&times;</button>
+								</div>
+								
+								<!-- Modal body -->
+								<div class="modal-body">
+											<form class="create-form">
 												<div class= "row">
+													<div class= "col">
+														<label for="auth">Author:</label>
+														<input class="form-control mr-sm-2" type="text" id="auth" name="author">
+													</div>
+													<div class= "col">
+														<label for="titl">Story Title:</label>
+														<input class="form-control mr-sm-2" type="text" id="titl" name="title">
+													</div>
+													<div class = "col">
+														<label for="gen">Genre:</label>
+														<input class="form-control mr-sm-2" type="text" id="gen" name="author">
+													</div>
+												</div>
+												<div class= "row">
+													<div class= "col">
+														<label for="snip">Snippet:</label>
+														<br>
+														<textarea id="snip" name="snippet" rows="5" cols="100"></textarea>
+													</div>
+												</div>
+												<div class= "row">
+													<div class= "col">
+														<button class="btn btn-primary my-2 my-sm-0" type="submit">Submit</button>
+													</div>
+												</div>
+											</form>
+										</div>
+								
+								<!-- Modal footer -->
+								<div class="modal-footer">
+									<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row opacitize add-spacing  justify-content-md-center opacitize card text-white bg-primary mb-3">
+				<div class="col col-md-10">
+					<p>View the latest crowdsourced stories</p>
+				</div>
+			</div>
+			<div class="row  opacitize card text-white bg-primary mb-3">
+				<div class="col col-md-10">
+			      <ul>
+			        {{#each stories}}
+			          <li>
+			            <p><span class="label">Title:</span> {{this.title}}</p>
+			            <p><span class="label">Author:</span> {{this.author}}</p>
+			            <a href="/read.html">Read</a>
+			          </li>
+			        {{/each}}
+			      </ul>
+				</div>
+			</div>
 													<div class= "col">
 														<label for="snip">Snippet:</label>
 														<br>
