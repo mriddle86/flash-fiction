@@ -22,9 +22,19 @@ module.exports = function(app) {
         });
     });
 
-    //GET STORY
-    app.get("/story/:id", function(req, res) {
-        res.sendFile(path.join(__dirname, "../public/read.html"));
+    //OPEN A STORY
+    app.get("/read/:id", function(req, res) {
+        db.stories.findOne({
+            where: {
+                id: req.params.id
+            }
+        }).then(function(dbStories) {
+        	console.log(dbStories)
+            var data = {
+                stories: dbStories
+            }
+            res.render("read", data);
+        })
     });
 
     //GET SNIPPET

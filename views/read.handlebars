@@ -1,62 +1,46 @@
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-		<link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css" type="text/css" />
-		<script src="https://code.jquery.com/jquery.js"></script>
-		<script src="/assets/javascript/stories.js"></script>
-		<script src="/jquery.lettering-0.6.1.min.js"></script>
-		<script src="/jquery.textillate.js"></script>
-		<title>Flash Fiction</title>
-	</head>
-	<body>
-		<div class="container">
-		  <div class="row">
-		    <div class="col col-md-10">
-				<div class="card text-white bg-primary mb-3">
-				  <div class="card-header" id="">Snippet {{this.level}} of 10</div>
-				  <div class="card-body snippet-div">
-				    
-				  </div>
+<div class="container">
+	<div class="row">
+		<div class="col col-md-10">
+			<div class="card text-white bg-primary mb-3">
+				{{#if level}}
+				<div class="card-header" id="">Snippet {{this.snippets.dataValues.level}} of 9</div>
+				{{else}}
+				<div class="card-header" id="">{{this.stories.dataValues.title}}</div>
+				{{/if}}
+				<div class="card-body snippet-div">
+					{{this.stories.dataValues.snippet}}
 				</div>
-		  </div>
-		  <div class="row">
-		  	<div class="col col-md-3">
-		  		<button  class="previous-level" type="button">Previous</button>
-		  	</div>
-		  	<div class="col col-md-3">
-		  		<div class="form-group">
-				  <label for="sel1">Select list:</label>
-				  <select class="form-control next-level" id="sel1">
-				    {{#each level}}
-				      <option>
-			            
-			          </option>
-			        {{/each}}
-				  </select>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col col-md-3">
+				<button  class="previous-level" type="button">Previous</button>
+			</div>
+			<div class="col col-md-3">
+				<div class="form-group">
+					<label for="sel1">Select list:</label>
+					<select class="form-control next-level" id="sel1">
+						{{#each level}}
+						<option>
+							
+						</option>
+						{{/each}}
+					</select>
 				</div>
-		  	</div>
-		  </div>
-		  <div class="row">
-		    <div class="col col-md-4">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col col-md-4">
 				<form data-id="{{this.id}}" class="create-snippet-form">
-
-				  <div class="form-group">
-				    <label for="auth">Author:</label>
-				    <input type="text" id="auth" name="author" value="{{this.author}}">
-				  </div>
-
-				  <label for="snip">Snippet:</label>
-				    <textarea id="snip" name="snippet" rows="8" cols="40"></textarea>
-
-				  <button type="submit"></button>
+					<div class="form-group">
+						<label for="auth">Author:</label>
+						<input type="text" id="auth" name="author" value="{{this.author}}">
+					</div>
+					<label for="snip">Snippet:</label>
+					<textarea id="snip" name="snippet" rows="8" cols="40"></textarea>
+					<button type="submit"></button>
 				</form>
 			</div>
-		  </div>
-
-
-	</body>
-</html>
+		</div>
+	</div>
+</div>
