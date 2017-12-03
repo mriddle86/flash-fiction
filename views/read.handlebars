@@ -1,62 +1,95 @@
+<div class="container">
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-		<link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css" type="text/css" />
-		<script src="https://code.jquery.com/jquery.js"></script>
-		<script src="/assets/javascript/stories.js"></script>
-		<script src="/jquery.lettering-0.6.1.min.js"></script>
-		<script src="/jquery.textillate.js"></script>
-		<title>Flash Fiction</title>
-	</head>
-	<body>
-		<div class="container">
-		  <div class="row">
-		    <div class="col col-md-10">
-				<div class="card text-white bg-primary mb-3">
-				  <div class="card-header" id="">Snippet {{this.level}} of 10</div>
-				  <div class="card-body snippet-div">
-				    
-				  </div>
-				</div>
-		  </div>
-		  <div class="row">
-		  	<div class="col col-md-3">
-		  		<button  class="previous-level" type="button">Previous</button>
+
+		<div class="row justify-content-md-center">
+		  	<div class="col col-md-1 opacitize">
+		  		<button  class=" btn btn-primary previous-level" type="button"><</button>
 		  	</div>
-		  	<div class="col col-md-3">
-		  		<div class="form-group">
-				  <label for="sel1">Select list:</label>
-				  <select class="form-control next-level" id="sel1">
+		  	<div class="col col-md-1 opacitize">
+		  		<button  class="btn btn-primary previous-level" type="button">></button>
+		  	</div>
+		  	<!-- <div class="col col-md-2"></div> -->
+		  	<form data-id="{{this.id}}" class="create-snippet-form">
+		  	<div class="form-group col col-md-6 opacitize">
+				
+				<select class="form-control next-level select-width" id="sel1" >
 				    {{#each level}}
-				      <option>
-			            
+				      <option >
+			           
 			          </option>
 			        {{/each}}
-				  </select>
-				</div>
-		  	</div>
-		  </div>
-		  <div class="row">
-		    <div class="col col-md-4">
-				<form data-id="{{this.id}}" class="create-snippet-form">
-
-				  <div class="form-group">
-				    <label for="auth">Author:</label>
-				    <input type="text" id="auth" name="author" value="{{this.author}}">
-				  </div>
-
-				  <label for="snip">Snippet:</label>
-				    <textarea id="snip" name="snippet" rows="8" cols="40"></textarea>
-
-				  <button type="submit"></button>
-				</form>
+				</select>
 			</div>
-		  </div>
+			</form>
+			<!-- <div class="col col-md-2"></div> -->
+			
+		</div>
 
 
-	</body>
-</html>
+
+
+
+		<div class="row justify-content-md-center opacitize">
+		    <div class="col col-md-12">
+				<div class="card text-white bg-primary mb-3">
+				  <div class="card-header" id="">Snippet {{this.level}} of 10</div>
+				  <div class="card-body snippet-div"></div>
+				</div>
+			</div>
+		</div>
+		
+
+		
+
+<!-- Button trigger modal -->
+		<div class="row justify-content-md-center opacitize">
+			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+			  Add a new snippet
+			</button>
+		</div>
+
+<!-- Modal -->
+ <!-- The Modal -->
+  <div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content text-white bg-primary mb-3">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Add new snippet to story</h4>
+          <button type="button" class="close " data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+         <div class="row justify-content-md-center">
+			<br>
+			<form data-id="{{this.id}}" class="create-snippet-form">
+				<div class="form-group col col-md-3">
+				    <label for="auth"><p>Author:</p></label>
+				    <input type="text" id="auth" name="author" >
+				</div>
+				<div class="form-group col col-md-6">
+				  <label for="snip"><p>Snippet:</p></label>
+				    <textarea id="snip" name="snippet" rows="5" cols="50"></textarea>
+				</div>
+				<div class="col col-md-3">
+				  <button type="submit" class="btn btn-primary">Submit</button>
+				</div>
+			</form>
+		</div>
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+
+
+	</div>
+
