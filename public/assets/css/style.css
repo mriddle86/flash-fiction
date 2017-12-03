@@ -22,3 +22,9 @@ body, html {
 .select-width {
 	min-width: 200px;
 }
+
+
+.add-spacing {
+    margin-top: 10px;
+}
+
