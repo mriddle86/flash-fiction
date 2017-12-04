@@ -28,3 +28,15 @@ body, html {
     margin-top: 10px;
 }
 
+
+.link-fix {
+    color: #ffffff;
+
+}
+
+@media only screen and (max-width: 768px) {
+    .bg {
+        background-image: url("");
+        background-color: lightblue;
+    }
+}
