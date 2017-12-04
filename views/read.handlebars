@@ -2,12 +2,16 @@
 
 
 		<div class="row justify-content-md-center">
+		{{#if prev}}
 		  	<div class="col col-md-1 opacitize">
 		  		<button  class=" btn btn-primary previous-level" type="button"><</button>
 		  	</div>
+		{{/if}}
+		{{#if next}}
 		  	<div class="col col-md-1 opacitize">
-		  		<button  class="btn btn-primary previous-level" type="button">></button>
+		  		<a href="localhost:8080/read/{{this.next.dataValues.level}}/{{this.current.dataValues.id}}"><button  class="btn btn-primary previous-level" type="button">></button></a>
 		  	</div>
+		{{/if}}
 		  	<!-- <div class="col col-md-2"></div> -->
 		  	<form data-id="{{this.id}}" class="create-snippet-form">
 		  	<div class="form-group col col-md-6 opacitize">
@@ -33,13 +37,19 @@
 		    <div class="col col-md-12">
 				<div class="card text-white bg-primary mb-3">
 				  <div class="card-header" id="">
-				  {{#if level}}
-				  Snippet {{this.snippets.dataValues.level}} of 10</div>
+				  {{#if prev}}
+				  Snippet
+				  {{this.current.dataValues.level}} of 9</div>
 				  {{else}}
-				  {{this.stories.dataValues.title}}</div>
+				  {{this.current.dataValues.title}}</div>
 				  {{/if}}
+
 				  <div class="card-body snippet-div">
-				  {{this.stories.dataValues.snippet}}
+				  {{#if prev}}
+				  {{this.current.dataValues.text}}
+				  {{else}}
+				  {{this.current.dataValues.snippet}}
+				  {{/if}}
 				  </div>
 				</div>
 			</div>
