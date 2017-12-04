@@ -32,8 +32,15 @@
 		<div class="row justify-content-md-center opacitize">
 		    <div class="col col-md-12">
 				<div class="card text-white bg-primary mb-3">
-				  <div class="card-header" id="">Snippet {{this.level}} of 10</div>
-				  <div class="card-body snippet-div"></div>
+				  <div class="card-header" id="">
+				  {{#if level}}
+				  Snippet {{this.snippets.dataValues.level}} of 10</div>
+				  {{else}}
+				  {{this.stories.dataValues.title}}</div>
+				  {{/if}}
+				  <div class="card-body snippet-div">
+				  {{this.stories.dataValues.snippet}}
+				  </div>
 				</div>
 			</div>
 		</div>
