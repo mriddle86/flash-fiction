@@ -9,7 +9,7 @@
 			 
 		</nav>
 		<div class="container">
-			<div class="row justify-content-md-center">
+			<div class="row justify-content-md-center add-spacing">
 				<div class="col col-md-12">
 					<!-- Button trigger modal -->
 					<div class="row justify-content-md-center opacitize">
@@ -46,7 +46,7 @@
 														<input class="form-control mr-sm-2" type="text" id="gen" name="author">
 													</div>
 												</div>
-												<div class= "row"><nav class="navbar navbar-light bg-light opacitize">
+												<div class= "row"><nav>
 	
 													<div class= "col">
 														<label for="snip">Snippet:</label>
@@ -72,21 +72,25 @@
 					</div>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col col-md-10">
-					<p>View the latest crowdsourced stories</p>
+			<div class="row justify-content-md-center opacitize add-spacing">
+				<div class="col col-md-6">
+				<div class="card text-white bg-primary mb-3">
+					<ul  style="list-style-type:none"><li><p>View the latest crowdsourced stories</p></li></ul>
+				</div>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col col-md-10">
-			      <ul>
+			<div class="row justify-content-md-center opacitize add-spacing">
+				<div class="col col-md-6">
+			      <div class="card text-white bg-primary mb-3">
+			      <ul style="list-style-type:none">
 			        {{#each stories}}
 			          <li>
-			            <p><span class="label">Title:</span> {{this.title}}</p>
-			            <p><span class="label">Author:</span> {{this.author}}</p>
-			            <a href="localhost:8080/read/0/{{this.id}}">Read</a>
+			            <p><span class="label">Title:</span> {{this.title}}<br>
+			            <span class="label">Author:</span> {{this.author}}<br>
+			            <a  class="link-fix" href="localhost:8080/read/0/{{this.id}}"><strong>Read</strong></a></p>
 			          </li>
 			        {{/each}}
-			      </ul>
+			     </ul>
 				</div>
+			  </div>
 			</div>
