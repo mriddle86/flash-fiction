@@ -33,16 +33,16 @@ User entry is sent to the database and then displayed from the database to the u
 
 On the homepage you will see a navigation with a search and login (not yet functional). below that you will see a button to add a story and a list of the five most recent stories.
 
-![Home Page](http://url/to/flash-fiction-1.png)
+![Home Page](https://raw.githubusercontent.com/mriddle86/flash-fiction/master/public/assets/flash-fiction-1.PNG)
 
 When you click the add story button, a modal will pop up with a form to add your story.
 
-![Home Page](http://url/to/flash-fiction-2.png)
+![Home Page](https://raw.githubusercontent.com/mriddle86/flash-fiction/master/public/assets/flash-fiction-2.PNG)
 
 If you want to view a story, click read under the story name and you will be directed to the start of that story. the story's title and inititial snippet will be viewable. you can click the next button above it to move along in the story.
 
-![Home Page](http://url/to/flash-fiction-3.png)
+![Home Page](https://raw.githubusercontent.com/mriddle86/flash-fiction/master/public/assets/flash-fiction-3.PNG)
 
 If you would like to add a snippet to the story, you can click the add snippet button and a modal will pop up with a form to fill out adding your snippet.
 
-![Home Page](http://url/to/flash-fiction-4.png)
+![Home Page](https://raw.githubusercontent.com/mriddle86/flash-fiction/master/public/assets/flash-fiction-4.PNG)
