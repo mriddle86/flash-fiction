@@ -4,7 +4,7 @@ Emery Cho, Marshall Riddle, Nelson Chandra
 
 ### Purpose
 
-This application is a place to write flash fiction stories that other people can continue.
+A fun application to encourage creative thought and working together. short stories (flash fiction) can be collaborated on by the users.
 
 ### Deployed Website
 
@@ -16,7 +16,10 @@ Write and submit a story that is up to 500 characters long. As more people contr
 
 ### How It Works
 
+Anyone can start a story.  Users can submit the title and first snippet (500 characters)
+Once a story is started other users can add snippets to the story. 
 
+User entry is sent to the database and then displayed from the database to the user using api get and post calls. 
 
 ### Libraries Used
 
@@ -25,3 +28,21 @@ Write and submit a story that is up to 500 characters long. As more people contr
 3. Textillate.js
 4. Animate.css
 5. Lettering.js
+
+### Walk Through
+
+On the homepage you will see a navigation with a search and login (not yet functional). below that you will see a button to add a story and a list of the five most recent stories.
+
+![Home Page](http://url/to/flash-fiction-1.png)
+
+When you click the add story button, a modal will pop up with a form to add your story.
+
+![Home Page](http://url/to/flash-fiction-2.png)
+
+If you want to view a story, click read under the story name and you will be directed to the start of that story. the story's title and inititial snippet will be viewable. you can click the next button above it to move along in the story.
+
+![Home Page](http://url/to/flash-fiction-3.png)
+
+If you would like to add a snippet to the story, you can click the add snippet button and a modal will pop up with a form to fill out adding your snippet.
+
+![Home Page](http://url/to/flash-fiction-4.png)
