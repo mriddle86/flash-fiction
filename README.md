@@ -4,11 +4,11 @@ Emery Cho, Marshall Riddle, Nelson Chandra
 
 ### Purpose
 
-A fun application to encourage creative thought and working together. short stories (flash fiction) can be collaborated on by the users.
+A fun application to encourage creative thought and working together. Short stories (flash fiction) can be collaborated on by the users.
 
 ### Deployed Website
 
-To be determined once uploaded to Heroku.
+https://nameless-woodland-82559.herokuapp.com/
 
 ### How to Use
 
