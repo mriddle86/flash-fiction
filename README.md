@@ -8,7 +8,7 @@ A fun application to encourage creative thought and working together. Short stor
 
 ### Deployed Website
 
-https://nameless-woodland-82559.herokuapp.com/
+https://nameless-woodland-82559.herokuapp.com/ (Link still in progress.)
 
 ### How to Use
 
